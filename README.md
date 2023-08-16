@@ -32,23 +32,15 @@ A digraph is defined as a set of vertices and a collection of directed edges, ea
 
 A directed path in a digraph is a sequence of vertices in which there is a (directed) edge pointing from each vertex in the sequence to its successor in the sequence, with no repeated edges. 
 
-**definition 1**. $If there is a directed path from vertex A to vertex $B$ and a directed path from vertex $B$ to vertex A, A and B are strongly connected.$ 
+**definition 1**. $If there is a directed path from vertex A to vertex B and a directed path from vertex B to vertex A, A and B are strongly connected.$ 
 
 
 ## Boolean Control Network
 
 ### Modelling with formula
 
-We denote the state vector of the BCN at timestep $t$ by
-$x(t)=(x_t^1,\dots,x_t^n)$, action vector of BCN at timestep $t$ by
-$\mathcal{U}(t) = (u_t^1,\dots,u_t^n)$, where $\mathcal{U}(t)$ is in
-$\mathcal{U} = \{\mathcal{U}(t),t\in \mathbb{Z} ^+\}, \mathcal{U}\subseteq \mathcal{B}^m$.
-Similarly, we denote the target state by $x_d=(x^1,\dots,x^n)$ and the
-optimal policy by $\pi^\ast =(u^1,\dots,u^m)$.
-$\mathcal{U}(t) \in\mathcal{B} ^m$ where $\mathcal{B}$ is defined as
-$\{0,1\}$, so $u_t^i\in\mathcal{B}$, and $\mathcal{B}^m$ is
-$\underbrace{\mathcal{B}\times \dots\times\mathcal{B}}_{m}$. Similarly,
-we get $x_t=(x_t^1,\dots,x_t^n)\in\mathcal{B}^n$\
+We denote the state vector of the BCN at timestep $t$ by $x(t)=(x_t^1,\dots,x_t^n)$, action vector of BCN at timestep $t$ by $\mathcal{U}(t) = (u_t^1,\dots,u_t^n)$, where $\mathcal{U}(t)$ is in $\mathcal{U} = \{\mathcal{U}(t),t\in \mathbb{Z} ^+\}, \mathcal{U}\subseteq \mathcal{B}^m$. Similarly, we denote the target state by $x_d=(x^1,\dots,x^n)$ and the optimal policy by $\pi^\ast =(u^1,\dots,u^m)$.$\mathcal{U}(t) \in\mathcal{B} ^m$ where $\mathcal{B}$ is defined as $\{0,1\}$, so $u_t^i\in\mathcal{B}$, and $\mathcal{B}^m$ is
+$\underbrace{\mathcal{B}\times \dots\times\mathcal{B}}$. Similarly, we get $x_t=(x_t^1,\dots,x_t^n)\in\mathcal{B}^n$.
 A BN with $n$ nodes can be expressed at timestep $t+1$ as:
 $$\begin{cases}
         x_{t+1}^1 = f_1(x_t^1,\dots,x_t^n),\\
