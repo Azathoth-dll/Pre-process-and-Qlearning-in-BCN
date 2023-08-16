@@ -1,24 +1,9 @@
 
 # Introduction
 
-Boolean function , a kind of function that can be used to evaluate any Boolean
-output associated with its Boolean input by means of a logical type of
-calculation, plays a fundamental role in complexity theory. When Boolean
-functions are applied to complex networks, the concept of a Boolean
-Network (or BN for short) is defined: a Boolean Network is a set of
-discrete Boolean variables, each assigned a Boolean function (which may
-be different for each variable), that takes inputs from a subset of
-these variables and outputs a state that determines the variable to
-which it is assigned.
+Boolean function , a kind of function that can be used to evaluate any Boolean output associated with its Boolean input by means of a logical type of calculation, plays a fundamental role in complexity theory. When Boolean functions are applied to complex networks, the concept of a Boolean Network (or BN for short) is defined: a Boolean Network is a set of discrete Boolean variables, each assigned a Boolean function (which may be different for each variable), that takes inputs from a subset of these variables and outputs a state that determines the variable to which it is assigned.
 
-The Probabilistic Boolean Network was proposed by *Shmulevich
- et al. in 2002* and the model is an extension of the
-Boolean network model . Each gene in this model corresponds to one or
-more Boolean functions, and one of these functions is selected with some
-probability at each iteration step to predict its next state.
-Probabilistic Boolean networks retain some of the properties of Boolean
-networks and can describe stochastic phenomena in gene regulatory
-networks.
+The Probabilistic Boolean Network was proposed by *Shmulevich et al. in 2002* and the model is an extension of the Boolean network model . Each gene in this model corresponds to one or more Boolean functions, and one of these functions is selected with some probability at each iteration step to predict its next state. Probabilistic Boolean networks retain some of the properties of Boolean networks and can describe stochastic phenomena in gene regulatory networks.
 
 Reinforcement learning is a field of machine learning that emphasizes
 how to act based on the environment in order to maximize the expected
@@ -85,7 +70,7 @@ successor in the sequence, with no repeated edges.
 
 **definition 1**. *If there is a directed path from vertex $A$ to vertex
 $B$ and a directed path from vertex $B$ to vertex $A$, A and B are
-strongly connected.*
+strongly connected.* 
 
 
 ## Boolean Control Network
@@ -99,14 +84,14 @@ $\mathcal{U} = \{\mathcal{U}(t),t\in \mathbb{Z} ^+\}, \mathcal{U}\subseteq \math
 Similarly, we denote the target state by $x_d=(x^1,\dots,x^n)$ and the
 optimal policy by $\pi^\ast =(u^1,\dots,u^m)$.
 $\mathcal{U}(t) \in\mathcal{B} ^m$ where $\mathcal{B}$ is defined as
-$\{ 0,1\}$, so $u_t^i\in\mathcal{B}$, and $\mathcal{B}^m$ is
+$\{0,1\}$, so $u_t^i\in\mathcal{B}$, and $\mathcal{B}^m$ is
 $\underbrace{\mathcal{B}\times \dots\times\mathcal{B}}_{m}$. Similarly,
 we get $x_t=(x_t^1,\dots,x_t^n)\in\mathcal{B}^n$\
 A BN with $n$ nodes can be expressed at timestep $t+1$ as:
 $$\begin{cases}
-        x_{t+1}^1 = f_1(x_t^1,\dots,x_t^n), \\
-        \vdots                                     \\
-        x_{t+1} = f_n(x_t^1,\dots,x_t^n). 
+        x_{t+1}^1 = f_1(x_t^1,\dots,x_t^n),\\
+        \vdots\\
+        x_{t+1} = f_n(x_t^1,\dots,x_t^n).\\
     \end{cases}$$
 where $x_j^i$, whose value selects only between 0 or 1 , denotes the
 values of $node_i$ at timestep $j$. $f_i$ is the iteration operator, or
