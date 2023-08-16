@@ -1,9 +1,3 @@
-<style>
-    pre{
-        overflow-y: auto;
-        max-height: 300px;
-    }
-</style>
 
 # Introduction
 
@@ -76,7 +70,7 @@ at time step $t$ is provided in Fig. 1.
 
 For Agent $i$ ,
 
-![Framework of MDP](.\img\fig_rl.png)
+![Framework of MDP](https://github.com/Azathoth-dll/Pre-process-and-Qlearning-in-BCN/blob/master/img/fig_rl.png)
 
 ## Digraph
 
@@ -559,7 +553,7 @@ $$\begin{cases}
 Through formula [error](#average-error) and [loss](#loss-function), we acquire the average error in $K$ episode, which is
 shown in following figure:
 
-![Average Error in K episodes of given 3-nodes system](.\img\Fig1.png)
+![Average Error in K episodes of given 3-nodes system](https://github.com/Azathoth-dll/Pre-process-and-Qlearning-in-BCN/blob/master/img/Fig1.png)
 
 In this case, it takes 1.11 *sec* to finish the training. It is obvious
 from the figure that the optimal policy is not unique. And we get one of
@@ -584,7 +578,7 @@ optimal policy. So we choose $N = 10^5, K = 5000$, and
 $T > |\mathcal{B}^9|$ which is set 600. And Similarly, we evaluate the
 algorithm through formula [error](#average-error) and [loss](#loss-function) and give out the following figure:
 
-![Average error in K episodes of given 9-nodes system](.\img\Fig2.png)
+![Average error in K episodes of given 9-nodes system](https://github.com/Azathoth-dll/Pre-process-and-Qlearning-in-BCN/blob/master/img/Fig2.png)
 
 Because of the number of states and multiple target states, the error
 function can't converge.
