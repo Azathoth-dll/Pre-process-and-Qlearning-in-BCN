@@ -5,53 +5,22 @@ Boolean function , a kind of function that can be used to evaluate any Boolean o
 
 The Probabilistic Boolean Network was proposed by *Shmulevich et al. in 2002* and the model is an extension of the Boolean network model . Each gene in this model corresponds to one or more Boolean functions, and one of these functions is selected with some probability at each iteration step to predict its next state. Probabilistic Boolean networks retain some of the properties of Boolean networks and can describe stochastic phenomena in gene regulatory networks.
 
-Reinforcement learning is a field of machine learning that emphasizes
-how to act based on the environment in order to maximize the expected
-benefit. This approach is generalizable and has therefore been studied
-in other fields such as game theory, cybernetics, operations research,
-information theory, simulation optimization, multi-subject system
-learning, population intelligence, statistics and genetic algorithms.
+Reinforcement learning is a field of machine learning that emphasizes how to act based on the environment in order to maximize the expected benefit. This approach is generalizable and has therefore been studied in other fields such as game theory, cybernetics, operations research, information theory, simulation optimization, multi-subject system learning, population intelligence, statistics and genetic algorithms.
 
-With respect to probabilistic Boolean networks, many control theory
-issues have been investigated for probabilistic Boolean control
-networks, including observability, stabilization and output tracking,
-which are mainly based on the semi-tensor product framework proposed by *Cheng et al*. However, most cannot be applied to gene regulatory
-networks simulated by probabilistic Boolean network models. A Boolean
-network with n nodes and a number of states of $2^n$ has tens of
-billions of states for a Boolean model of a process with tens of
-variables, while a model with thousands of variables has more states
-than the Planck volume in the observable universe. The control problem
-of Boolean networks, i. e. , making the system reach its target state by
-control, has exponential time computational complexity and is even more
+With respect to probabilistic Boolean networks, many control theory issues have been investigated for probabilistic Boolean control networks, including observability, stabilization and output tracking, which are mainly based on the semi-tensor product framework proposed by *Cheng et al*. However, most cannot be applied to gene regulatory networks simulated by probabilistic Boolean network models. A Boolean network with n nodes and a number of states of $2^n$ has tens of billions of states for a Boolean model of a process with tens of variables, while a model with thousands of variables has more states than the Planck volume in the observable universe. The control problem of Boolean networks, i. e. , making the system reach its target state by control, has exponential time computational complexity and is even more
 NP-hard (difficult to solve in polynomial time).
 
-Although the control problem has been investigated using Q-Learning
-and its variants, however, the results focus only on changing the level
-of activation of specific genes and do not propose an explicit feedback
-method to solve the control problem.
+Although the control problem has been investigated using Q-Learning and its variants, however, the results focus only on changing the level of activation of specific genes and do not propose an explicit feedback method to solve the control problem.
 
-Compared to previous control problems with Boolean networks which have
-studied small-scale networks, we use Q-learning algorithms in artificial
-intelligence to study the control problem of large-scale Boolean
-networks from an approximate perspective and solve its control and
-NP-hard problem.
+Compared to previous control problems with Boolean networks which have studied small-scale networks, we use Q-learning algorithms in artificial intelligence to study the control problem of large-scale Boolean networks from an approximate perspective and solve its control and NP-hard problem.
 
 # PRELIMINARIES
 
-In this section, we will declare notations and form the primary
-structure of BCNs. Additionally, we adopt one of the Reinforcement
-learning methods, Q-Learning, on the control problem of BCNs. Moreover,
-we introduce a method of pre-process to reduce calculation.
+In this section, we will declare notations and form the primary structure of BCNs. Additionally, we adopt one of the Reinforcement learning methods, Q-Learning, on the control problem of BCNs. Moreover, we introduce a method of pre-process to reduce calculation.
 
 ## Markov Decision Process
 
-A Markov Decision Process(MDP) contains two sections, the environment
-and the agents. In MDP, each agent has target states. The agent updates
-its state by interacting with the environment and receives rewards by
-taking actions. The process continues until the agent reaches a target
-state, which marks the end of an episode. Meanwhile, the process of each
-state change by the agent is called a time step. The framework of an MDP
-at time step $t$ is provided in Fig. 1.
+A Markov Decision Process(MDP) contains two sections, the environment and the agents. In MDP, each agent has target states. The agent updates its state by interacting with the environment and receives rewards by taking actions. The process continues until the agent reaches a target state, which marks the end of an episode. Meanwhile, the process of each state change by the agent is called a time step. The framework of an MDP at time step $t$ is provided in Fig. 1.
 
 For Agent $i$ ,
 
@@ -59,18 +28,11 @@ For Agent $i$ ,
 
 ## Digraph
 
-A digraph is defined as a set of vertices and a collection of directed
-edges, each connecting an ordered pair of vertices. We say that a
-directed edge points from the first vertex in the pair and points to the
-second vertex in the pair.
+A digraph is defined as a set of vertices and a collection of directed edges, each connecting an ordered pair of vertices. We say that a directed edge points from the first vertex in the pair and points to the second vertex in the pair.
 
-A directed path in a digraph is a sequence of vertices in which there is
-a (directed) edge pointing from each vertex in the sequence to its
-successor in the sequence, with no repeated edges. 
+A directed path in a digraph is a sequence of vertices in which there is a (directed) edge pointing from each vertex in the sequence to its successor in the sequence, with no repeated edges. 
 
-**definition 1**. *If there is a directed path from vertex $A$ to vertex
-$B$ and a directed path from vertex $B$ to vertex $A$, A and B are
-strongly connected.* 
+**definition 1**. *If there is a directed path from vertex $A$ to vertex $B$ and a directed path from vertex $B$ to vertex $A$, A and B are strongly connected.* 
 
 
 ## Boolean Control Network
