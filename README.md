@@ -32,7 +32,7 @@ A digraph is defined as a set of vertices and a collection of directed edges, ea
 
 A directed path in a digraph is a sequence of vertices in which there is a (directed) edge pointing from each vertex in the sequence to its successor in the sequence, with no repeated edges. 
 
-**definition 1**. *If there is a directed path from vertex $A$ to vertex $B$ and a directed path from vertex $B$ to vertex $A$, A and B are strongly connected.* 
+**definition 1**. $If there is a directed path from vertex A to vertex $B$ and a directed path from vertex $B$ to vertex A, A and B are strongly connected.$ 
 
 
 ## Boolean Control Network
