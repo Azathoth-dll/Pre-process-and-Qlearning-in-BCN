@@ -39,14 +39,16 @@ A directed path in a digraph is a sequence of vertices in which there is a (dire
 
 ### Modelling with formula
 
-We denote the state vector of the BCN at timestep $t$ by $x(t)=(x_t^1,\dots,x_t^n)$, action vector of BCN at timestep $t$ by $\mathcal{U}(t) = (u_t^1,\dots,u_t^n)$, where $\mathcal{U}(t)$ is in $\mathcal{U} = \{\mathcal{U}(t),t\in \mathbb{Z} ^+\}, \mathcal{U}\subseteq \mathcal{B}^m$. Similarly, we denote the target state by $x_d=(x^1,\dots,x^n)$ and the optimal policy by $\pi^\ast =(u^1,\dots,u^m)$.$\mathcal{U}(t) \in\mathcal{B} ^m$ where $\mathcal{B}$ is defined as $\{0,1\}$, so $u_t^i\in\mathcal{B}$, and $\mathcal{B}^m$ is
-$\underbrace{\mathcal{B}\times \dots\times\mathcal{B}}$. Similarly, we get $x_t=(x_t^1,\dots,x_t^n)\in\mathcal{B}^n$.
-A BN with $n$ nodes can be expressed at timestep $t+1$ as:
-$$\begin{cases}
-        x_{t+1}^1 = f_1(x_t^1,\dots,x_t^n),\\
-        \vdots\\
-        x_{t+1} = f_n(x_t^1,\dots,x_t^n).\\
-    \end{cases}$$
+We denote the state vector of the BCN at timestep $t$ by $x(t)=(x_t^1,\dots,x_t^n)$, action vector of BCN at timestep $t$ by $\mathcal{U}(t) = (u_t^1,\dots,u_t^n)$, where $\mathcal{U}(t)$ is in $\mathcal{U} = \{\mathcal{U}(t),t\in \mathbb{Z} ^+\}, \mathcal{U}\subseteq \mathcal{B}^m$. Similarly, we denote the target state by $x_d=(x^1,\dots,x^n)$ and the optimal policy by $\pi^\ast =(u^1,\dots,u^m)$.$\mathcal{U}(t) \in \mathcal{B}^m$ where $\mathcal{B}$ is defined as \{0,1}\, so $u_t^i\in\mathcal{B}$, and $\mathcal{B}^m$ is
+$\underbrace{\mathcal{B}\times\dots\times\mathcal{B}}{m}$. Similarly, we get $x_t=(x_t^1,\dots,x_t^n)\in\mathcal{B}^n$.
+A BN with $n$ nodes can be expressed at timestep $t+1$ as:\\
+$$
+\begin{cases}
+x_{t+1}^1 = f_1(x_t^1,\dots,x_t^n),\\
+\vdots\\
+x_{t+1} = f_n(x_t^1,\dots,x_t^n).\\
+\end{cases}
+$$
 where $x_j^i$, whose value selects only between 0 or 1 , denotes the
 values of $node_i$ at timestep $j$. $f_i$ is the iteration operator, or
 can be named as state transition function, for $node_i$ without impact
@@ -54,12 +56,14 @@ of control nodes , donating Boolean operation on nodes at timestep
 $i-1$.
 
 We employ $g$ to denote the control operator so that we get the full
-expression of BCN:
-$$\begin{cases}
-        x_{t+1}^1=g\cdot f_1(x_t^1,\dots,x_t^n), \\
-        \vdots                                             \\
-        x_{t+1}^n=g\cdot f_n(x_t^n,\dots,x_t^n). \\
-    \end{cases}$$
+expression of BCN:\\
+$$
+\begin{cases}
+x_{t+1}^1=g\cdot f_1(x_t^1,\dots,x_t^n), \\
+\vdots                                             \\
+x_{t+1}^n=g\cdot f_n(x_t^n,\dots,x_t^n). \\
+\end{cases}
+$$
 Simply, we denote as $x_{t+1} = g\cdot f(x_t)$. It worths mentioning
 that $g$ may reverse the values of some of the nodes in BN or apply
 control nodes,whose value rely on $u_t^i,i=(1,\dots,m)$ at timestep $t$,
@@ -114,7 +118,7 @@ $\pi^\ast =(u^1,\dots,u^m)$ is the set of optimal policy.\
 The reward function $r(x(t))$ is defined as below:
 $$r(x_t,u_t) = \begin{cases}
 1,x_{t+1} \in x_d\\
-0,x_{t+1} \notin x_d
+0,x_{t+1} \notin x_d\\
 \end{cases}$$
 
 Let's think about the process of rewards payback carefully. When the
